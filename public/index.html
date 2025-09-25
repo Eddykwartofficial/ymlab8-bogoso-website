@@ -1,43 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamoransa Model Lab 8, Bogoso - Robotics & STEM Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">YM LAB 8 | BOGOSO</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#programs">Programs Offered</a>
+            <a href="#learning">Learning Centre</a>
+            <a href="#gallery">Gallery & Awards</a>
+            <a href="#news">News</a>
+            <a href="#about">About Us</a>
+            <a href="#donate" class="btn-cta">Donate</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Empowering the Next Generation of Ghanaian Innovators.</h1>
+                <p>Equipping teachers with simple methodology and students with practical skills in **Robotics, Coding, and Computing**.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="window.location.href='#learning'">Start Learning</button>
+                    <button class="btn-secondary" onclick="window.location.href='#donate'">Support Our Mission</button>
+                </div>
+            </div>
+        </section>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <section id="programs" class="content-section">
+            <h2>Our Core Programs</h2>
+            <div class="program-cards">
+                <div class="card">
+                    <h3><i class="fas fa-robot"></i> Robotics & MakerSpace</h3>
+                    <p>Hands-on experience with kits, 3D printing, and AR/VR—using simple, experiential learning techniques.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-code"></i> Computer Programming (Coding)</h3>
+                    <p>Focus on **block-based programming** (Scratch) and foundational logic for students and simple methodology for teachers.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-desktop"></i> Computing & ICT</h3>
+                    <p>Core digital literacy, statistical analysis, and software application skills using modern lab resources.</p>
+                </div>
+            </div>
+            <a href="programs.html" class="btn-text">View Full Curriculum</a>
+        </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <section id="learning" class="content-section light-bg">
+            <h2>The Learning Centre</h2>
+            <div class="learning-grid">
+                <div class="resource-block">
+                    <h3>For Teachers: Simple Methodology</h3>
+                    <p>Access downloadable lesson plans, pedagogy guides, and sign up for our next **Teacher Training Workshop**.</p>
+                    <button class="btn-primary" id="workshop-signup-btn">Sign Up for Workshop</button>
+                </div>
+                <div class="resource-block">
+                    <h3>For Students: Quiz & Practice</h3>
+                    <p>Test your knowledge on flowcharts and coding fundamentals. **Instant feedback** provided on all quizzes!</p>
+                    <button class="btn-secondary" id="start-quiz-btn">Start Robotics Quiz</button>
+                </div>
+            </div>
+            <div id="workshop-calendar-placeholder">
+                <p class="placeholder-text">Loading Upcoming Workshops...</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Gallery & Achievement Showcase</h2>
+            <p>Celebrating innovation and success since 2022, including our **ACity Tech Expo** achievements.</p>
+            <div id="gallery-grid">
+                <div class="gallery-item placeholder"><p>YM Lab 8 at ACity Tech Expo 2025 (Most Innovative Project)</p></div>
+                <div class="gallery-item placeholder"><p>Teacher Training Session (2024)</p></div>
+            </div>
+            <a href="gallery.html" class="btn-text">View Full Photo Albums</a>
+        </section>
+
+        <section id="donate" class="content-section dark-bg">
+            <h2>Support the Next Innovator</h2>
+            <p>Your donation empowers students and teachers in Bogoso. Partner with us to sustain quality STEM education.</p>
+            <form id="donation-form" class="form-compact">
+                <div class="form-group">
+                    <label for="amount">Donation Amount (GHC)</label>
+                    <input type="number" id="amount" name="amount" placeholder="e.g., 500" required>
+                </div>
+                <button type="submit" class="btn-cta">Donate Securely via Paystack/Flutterwave</button>
+                <p class="small-text">All donations are securely processed.</p>
+            </form>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+                <form id="contact-form" class="form-standard">
+                    <h3>General Enquiry</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Our Location</h3>
+                    <p>Yamoransa Model Lab 8</p>
+                    <p>Bogoso, Western Region, Ghana</p>
+                    <p>Email: <a href="mailto:info@ymlab8bogoso.org">info@ymlab8bogoso.org</a></p>
+                    <div id="map-placeholder">[Google Map Placeholder for Bogoso Centre Location]</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Yamoransa Model Lab 8, Bogoso. Managed by the YMDC and supported by HAF & TECHAiDE.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
 </html>
