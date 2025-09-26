@@ -1,0 +1,292 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #007bff; /* A bright, professional blue */
+    --secondary-color: #28a745; /* A vibrant green for education/success */
+    --light-bg: #f8f9fa; /* Off-white for section contrast */
+    --dark-bg: #343a40; /* Dark grey for footer/donation section */
+    --text-color: #212529;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+/* --- Utility Classes & Buttons --- */
+.content-section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.light-bg { background-color: var(--light-bg); }
+.dark-bg { background-color: var(--dark-bg); color: white; }
+.dark-bg a { color: #88bbff; }
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.btn-cta, .btn-primary, .btn-secondary, .btn-text {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    margin-left: 10px;
+}
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-cta {
+    background-color: #ffc107; /* A welcoming yellow for the call to action */
+    color: var(--text-color);
+}
+.btn-cta:hover {
+    background-color: #e0a800;
+}
+.btn-text {
+    background: none;
+    color: var(--primary-color);
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+nav a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95em;
+}
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('placeholder-lab-image.jpg') no-repeat center center/cover; /* Placeholder for a lab image */
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: relative;
+    /* Overlay for readability */
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* --- Programs Section --- */
+.program-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.program-cards .card {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.program-cards .card i {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+.program-cards .card h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* --- Learning Centre --- */
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    text-align: left;
+}
+.resource-block {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+#workshop-calendar-placeholder {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+/* --- Gallery & Contact Forms --- */
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.gallery-item.placeholder {
+    background-color: #e9ecef;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.form-standard input, .form-standard textarea,
+.form-compact input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-stack);
+}
+.form-compact {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.contact-info {
+    padding: 20px;
+    background: var(--light-bg);
+    border-radius: 8px;
+}
+#map-placeholder {
+    height: 200px;
+    background-color: #ccc;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-bg);
+    color: white;
+    font-size: 0.85em;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .program-cards, .learning-grid, .contact-grid {
+        flex-direction: column;
+        display: flex; /* Override grid for column stack */
+    }
+
+    .program-cards .card {
+        flex: none;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    nav { display: none; }
+    .menu-toggle { display: block; }
+    .hero h1 { font-size: 2em; }
+    .hero-actions button {
+        margin: 5px 0;
+    }
+}
