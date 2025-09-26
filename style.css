@@ -127,7 +127,7 @@ nav a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('placeholder-lab-image.jpg') no-repeat center center/cover; /* Placeholder for a lab image */
+    background: url('./public/ALL PICTURES/ROBO1.jpg') no-repeat center center/cover; /* Placeholder for a lab image */
     min-height: 50vh;
     display: flex;
     align-items: center;
