@@ -77,7 +77,7 @@ function handleDonationSubmit(event) {
 // Function to handle the Workshop Sign-up (API Integration Mock)
 function handleWorkshopSignup() {
     const selectedWorkshop = prompt("Enter the ID of the workshop you want to sign up for (e.g., 1 or 2):");
-    const workshop = state.workshops.find(w => w.id == selectedWorkshop);
+    const workshop = state.workshops.find(w => w.id === selectedWorkshop);
 
     if (workshop) {
         // --- BOOKING SYSTEM API INTEGRATION POINT ---
