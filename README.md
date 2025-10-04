@@ -55,18 +55,5 @@ The site will open in your browser at http://localhost:3000. Changes made to the
 🛠️ API & Mock Data Management
 The components currently utilize mock data within their respective files (e.g., fetchQuizQuestions, initiatePaystackPayment).
 
-To transition to the robust, live platform, you must:
-
-Set up the Strapi Backend: Configure models for News, Awards, Programs, and deploy the Strapi instance.
-Replace Mock Functions: Update the fetch* functions in the components (ContentFetcher.jsx, QuizComponent.jsx, etc.) to point to your live Strapi or booking API endpoints.
-Configure Environment Variables: Add your payment gateway keys and API URLs to a .env file for security.
-Variable (Example)	Purpose
-REACT_APP_PAYSTACK_KEY	Public key for payment processing.
-REACT_APP_CMS_API_URL	Base URL for the Strapi Content Management System.
-🚀 Deployment
-To deploy the production-ready version of the website:
-
-Build the Project: This command optimizes and minifies all files into the build/ folder.
-npm run build
 
 Deploy: Upload the contents of the generated build folder to a static hosting service like Netlify, Vercel, or GitHub Pages. These services are highly recommended for optimal performance and simple continuous deployment.
