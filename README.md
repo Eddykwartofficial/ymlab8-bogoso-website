@@ -27,17 +27,28 @@ ymlab8-bogoso-website/
 ├── public/
 ├── src/
 │   ├── components/
-│   │   ├── ContentFetcher.jsx         // Fetches News, Gallery, and Awards from CMS
-│   │   ├── DonationForm.jsx           // Handles Paystack/Flutterwave integration
-│   │   ├── QuizComponent.jsx          // Interactive student quiz and state management
-│   │   ├── WorkshopCalendar.jsx       // Fetches and manages workshop sign-ups
-│   │   └── Layout.jsx                 // Global components (Header, Footer, Navigation)
-│   ├── App.js                         // Main application component, assembles all features
-│   ├── index.js                       // Renders the main App component
-│   └── styles/
-│       └── App.css                    // Global styles
-└── package.json                       // Project dependencies and scripts
-▶️ Getting Started
+│   │   ├── Layout.jsx
+│   │   ├── Navigation.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── ProgramsPage.jsx
+│   │   ├── LearningCenter.jsx
+│   │   ├── GalleryPage.jsx
+│   │   ├── NewsPage.jsx
+│   │   ├── AboutPage.jsx
+│   │   ├── DonatePage.jsx
+│   │   ├── ContactPage.jsx
+│   │   ├── QuizComponent.jsx
+│   │   ├── DonationForm.jsx
+│   │   ├── WorkshopCalendar.jsx
+│   │   └── ContentFetcher.jsx
+│   ├── data/
+│   │   └── programsData.js
+│   ├── App.jsx
+│   ├── index.jsx
+│   └── index.css
+├── .env
+├── package.json
+└── tailwind.config.js
 Follow these steps to set up and run the project locally for development:
 
 Prerequisites
