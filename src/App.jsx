@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
+import ProgramsPage from './components/ProgramsPage';
+import LearningCenter from './components/LearningCenter';
+import ContactPage from './components/ContactPage';
 import { BookOpen } from 'lucide-react';
 
 function App() {
@@ -12,19 +15,19 @@ function App() {
       case 'home':
         return <HomePage setCurrentPage={setCurrentPage} setSelectedProgram={setSelectedProgram} />;
       case 'programs':
-        return <div className="p-8"><h2 className="text-2xl">Programs Page (Coming Soon)</h2></div>;
+        return <ProgramsPage />;
       case 'learning':
-        return <div className="p-8"><h2 className="text-2xl">Learning Center (Coming Soon)</h2></div>;
-      case 'gallery':
-        return <div className="p-8"><h2 className="text-2xl">Gallery (Coming Soon)</h2></div>;
-      case 'news':
-        return <div className="p-8"><h2 className="text-2xl">News (Coming Soon)</h2></div>;
-      case 'about':
-        return <div className="p-8"><h2 className="text-2xl">About Us (Coming Soon)</h2></div>;
-      case 'donate':
-        return <div className="p-8"><h2 className="text-2xl">Donate (Coming Soon)</h2></div>;
+        return <LearningCenter />;
       case 'contact':
-        return <div className="p-8"><h2 className="text-2xl">Contact (Coming Soon)</h2></div>;
+        return <ContactPage />;
+      case 'gallery':
+        return <div className="p-8 min-h-screen"><h2 className="text-2xl">Gallery (Coming Soon)</h2></div>;
+      case 'news':
+        return <div className="p-8 min-h-screen"><h2 className="text-2xl">News (Coming Soon)</h2></div>;
+      case 'about':
+        return <div className="p-8 min-h-screen"><h2 className="text-2xl">About Us (Coming Soon)</h2></div>;
+      case 'donate':
+        return <div className="p-8 min-h-screen"><h2 className="text-2xl">Donate (Coming Soon)</h2></div>;
       default:
         return <HomePage setCurrentPage={setCurrentPage} setSelectedProgram={setSelectedProgram} />;
     }
@@ -73,12 +76,12 @@ function App() {
               <p className="text-sm text-gray-300">
                 Bogoso, Western Region<br />
                 Ghana<br />
-                info@ymlab8-bogoso.org
+                ymlab8cm@gmail.com
               </p>
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-            <p>2024 Yamoransa Model Lab 8, Bogoso. All rights reserved.</p>
+            <p>2025 Yamoransa Model Lab 8, Bogoso. All rights reserved.</p>
           </div>
         </div>
       </footer>
