@@ -1,37 +1,88 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-// Layout
-import Layout from './components/Layout';
-
-// Pages
-import HomePage from './pages/HomePage';
-import ProgramsPage from './pages/ProgramsPage';
-import LearningCenterPage from './pages/LearningCenterPage';
-import GalleryPage from './pages/GalleryPage';
-import NewsPage from './pages/NewsPage';
-import AboutPage from './pages/AboutPage';
-import DonatePage from './pages/DonatePage';
-import ContactPage from './pages/ContactPage';
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
+import HomePage from './components/HomePage';
+import { BookOpen } from 'lucide-react';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+  const [selectedProgram, setSelectedProgram] = useState(null);
+
+  const renderPage = () => {
+    switch(currentPage) {
+      case 'home':
+        return <HomePage setCurrentPage={setCurrentPage} setSelectedProgram={setSelectedProgram} />;
+      case 'programs':
+        return <div className="p-8"><h2 className="text-2xl">Programs Page (Coming Soon)</h2></div>;
+      case 'learning':
+        return <div className="p-8"><h2 className="text-2xl">Learning Center (Coming Soon)</h2></div>;
+      case 'gallery':
+        return <div className="p-8"><h2 className="text-2xl">Gallery (Coming Soon)</h2></div>;
+      case 'news':
+        return <div className="p-8"><h2 className="text-2xl">News (Coming Soon)</h2></div>;
+      case 'about':
+        return <div className="p-8"><h2 className="text-2xl">About Us (Coming Soon)</h2></div>;
+      case 'donate':
+        return <div className="p-8"><h2 className="text-2xl">Donate (Coming Soon)</h2></div>;
+      case 'contact':
+        return <div className="p-8"><h2 className="text-2xl">Contact (Coming Soon)</h2></div>;
+      default:
+        return <HomePage setCurrentPage={setCurrentPage} setSelectedProgram={setSelectedProgram} />;
+    }
+  };
+
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/programs" element={<ProgramsPage />} />
-          <Route path="/learning" element={<LearningCenterPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/donate" element={<DonatePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </Layout>
-      <ToastContainer position="bottom-right" autoClose={3000} />
-    </Router>
+    <div className="min-h-screen bg-gray-50">
+      <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {renderPage()}
+      
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="bg-orange-500 p-2 rounded-lg">
+                  <BookOpen className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-bold">YM Lab 8</h3>
+              </div>
+              <p className="text-gray-300 mb-4 text-sm">
+                Empowering rural and urban education through innovative STEM programs.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li><button onClick={() => setCurrentPage('home')} className="hover:text-white">Home</button></li>
+                <li><button onClick={() => setCurrentPage('programs')} className="hover:text-white">Programs</button></li>
+                <li><button onClick={() => setCurrentPage('learning')} className="hover:text-white">Learning Center</button></li>
+                <li><button onClick={() => setCurrentPage('contact')} className="hover:text-white">Contact</button></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Programs</h4>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>Robotics Fundamentals</li>
+                <li>Scratch Programming</li>
+                <li>Python for Young Programmers</li>
+                <li>AI & Machine Learning</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <p className="text-sm text-gray-300">
+                Bogoso, Western Region<br />
+                Ghana<br />
+                info@ymlab8-bogoso.org
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+            <p>2024 Yamoransa Model Lab 8, Bogoso. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 
