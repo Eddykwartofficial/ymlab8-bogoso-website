@@ -47,7 +47,30 @@ ymlab8-bogoso-website/
 │   ├── index.jsx
 │   └── index.css
 ├── .env
-├── package.json
+├── package.json# Yamoransa Model Lab 8 (YM Lab 8) Website 💻
+
+This is the official website for Yamoransa Model Lab 8 located in Bogoso, Western Region, Ghana. The site serves as a vital resource hub for students, teachers, parents, and donors, focusing on Robotics, Programming, and Computing education.
+
+## 🚀 Project Goals
+
+The primary objective of this website is to provide a comprehensive, educational, and professionally simple platform that supports the mission of YM Lab 8.
+
+- **Educate Teachers**: Provide access to simple methodologies and curricula for teaching robotics and programming
+- **Empower Students**: Offer a Learning Centre with interactive tools, including quizzes, tutorials, and resources
+- **Inform Stakeholders**: Provide timely news, gallery updates (including awards from 2022 to date), and program information
+- **Enable Donations**: Offer a clear and secure path for donors to support the lab's mission
+
+## ⚙️ Technology Stack
+
+| Component | Technology | Role in Project |
+|-----------|-----------|-----------------|
+| Frontend | React (with Hooks) | Component-based UI development and state management |
+| Styling | Tailwind CSS | Utility-first framework for clean, responsive design |
+| Build Tool | Vite | Fast development server and optimized builds |
+| Icons | Lucide React | Beautiful, consistent icon library |
+| Payment Gateway | Paystack/Flutterwave | Secure online donation processing |
+
+## 📁 Project Structure
 └── tailwind.config.js
 Follow these steps to set up and run the project locally for development:
 
