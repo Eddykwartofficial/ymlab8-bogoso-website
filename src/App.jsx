@@ -3,6 +3,10 @@ import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import ProgramsPage from './components/ProgramsPage';
 import LearningCenter from './components/LearningCenter';
+import GalleryPage from './components/GalleryPage';
+import NewsPage from './components/NewsPage';
+import AboutPage from './components/AboutPage';
+import DonatePage from './components/DonatePage';
 import ContactPage from './components/ContactPage';
 import { BookOpen } from 'lucide-react';
 
@@ -18,16 +22,16 @@ function App() {
         return <ProgramsPage />;
       case 'learning':
         return <LearningCenter />;
+      case 'gallery':
+        return <GalleryPage />;
+      case 'news':
+        return <NewsPage />;
+      case 'about':
+        return <AboutPage />;
+      case 'donate':
+        return <DonatePage />;
       case 'contact':
         return <ContactPage />;
-      case 'gallery':
-        return <div className="p-8 min-h-screen"><h2 className="text-2xl">Gallery (Coming Soon)</h2></div>;
-      case 'news':
-        return <div className="p-8 min-h-screen"><h2 className="text-2xl">News (Coming Soon)</h2></div>;
-      case 'about':
-        return <div className="p-8 min-h-screen"><h2 className="text-2xl">About Us (Coming Soon)</h2></div>;
-      case 'donate':
-        return <div className="p-8 min-h-screen"><h2 className="text-2xl">Donate (Coming Soon)</h2></div>;
       default:
         return <HomePage setCurrentPage={setCurrentPage} setSelectedProgram={setSelectedProgram} />;
     }
@@ -65,10 +69,10 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Programs</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li>Robotics Fundamentals</li>
+                <li>Robotics Fundamentals and Arduino</li>
                 <li>Scratch Programming</li>
-                <li>Python for Young Programmers</li>
-                <li>AI & Machine Learning</li>
+                <li>Web Development</li>
+                <li>AI & Drone Flight</li>
               </ul>
             </div>
             <div>
@@ -83,10 +87,3 @@ function App() {
           <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
             <p>2025 Yamoransa Model Lab 8, Bogoso. All rights reserved.</p>
           </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
-
-export default App;
