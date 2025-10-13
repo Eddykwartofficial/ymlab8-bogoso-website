@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { programs } from '../data/programsData';
+import { programs } from './data/programsData';
 
 const ProgramsPage = () => {
   const [workshopForm, setWorkshopForm] = useState({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { programs } from '../data/programsData';
+import { programs } from './data/programsData';
 
 const HomePage = ({ setCurrentPage, setSelectedProgram }) => {
   return (
