@@ -83,7 +83,7 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                    Near Bogoso Senior High School<br />
+                    B-Line, Opp St. Edward Clinic<br />
                     Bogoso, Western Region<br />
                     Ghana
                   </p>
@@ -94,7 +94,7 @@ const ContactPage = () => {
                 <Phone className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+233 XX XXX XXXX</p>
+                  <p className="text-gray-600">+233 245 676 541</p>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ const ContactPage = () => {
                 <Mail className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-800">Email</h3>
-                  <p className="text-gray-600">info@ymlab8-bogoso.org</p>
+                  <p className="text-gray-600">ymlab8cm@gmail.com</p>
                 </div>
               </div>
 
@@ -111,8 +111,8 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-800">Operating Hours</h3>
                   <p className="text-gray-600">
-                    Monday - Friday: 8:00 AM - 5:00 PM<br />
-                    Saturday: 9:00 AM - 2:00 PM<br />
+                    Monday - Friday: 8:00 AM - 4:00 PM<br />
+                    Saturday: Closed<br />
                     Sunday: Closed
                   </p>
                 </div>
