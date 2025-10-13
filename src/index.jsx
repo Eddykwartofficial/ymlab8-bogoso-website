@@ -1,23 +1,10 @@
-@import "tailwindcss";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 
-
-
-@layer base {
-  body {
-    @apply font-sans antialiased;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-ymlab-blue hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors;
-  }
-  
-  .btn-secondary {
-    @apply bg-ymlab-orange hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors;
-  }
-  
-  .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow;
-  }
-}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
